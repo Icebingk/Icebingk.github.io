@@ -1,0 +1,27 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'zh-CN' }}">
+<head>
+  {% include head.html %}
+</head>
+<body class="theme-system">
+  <!-- ====== 导航栏 ====== -->
+  {% include header.html %}
+
+  <main class="page-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <!-- ====== 页脚 ====== -->
+  {% include footer.html %}
+
+  <!-- ====== 主题切换按钮（悬浮） ====== -->
+  {% include theme-toggle.html %}
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

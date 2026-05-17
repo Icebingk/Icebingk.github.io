@@ -1,0 +1,14 @@
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+
+# 系统文件
+Thumbs.db
+.DS_Store
+*.swp
+*.swo
+*~

@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+  {% if page.title %}
+    {{ page.title }} | {{ site.title }}
+  {% else %}
+    {{ site.title }} | {{ site.tagline }}
+  {% endif %}
+</title>
+
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+<!-- SEO / Open Graph -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:description" content="{{ site.description }}">
+<meta property="og:type" content="website">
+
+<!-- 主样式表 -->
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+
+<!-- 预加载深色主题，避免白屏闪烁 -->
+<script>
+(function() {
+  var theme = localStorage.getItem('theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  if (theme === 'dark' || (!theme && prefersDark)) {
+    document.documentElement.classList.add('dark');
+  }
+})();
+</script>

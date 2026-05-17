@@ -1,0 +1,62 @@
+# ============================================================
+# Jekyll 站点配置
+# 对应 GitHub Pages 仓库: <username>.github.io
+# ============================================================
+
+title:            "My Space"
+tagline:          "代码 · 硬件 · 生活"
+description:      "个人技术博客与项目展示"
+author:
+  name:           "Your Name"
+  email:          "your-email@example.com"
+  github:         "your-github-username"
+
+# 站点 URL（部署到 GitHub Pages 后生效）
+url:              "https://your-github-username.github.io"
+baseurl:          ""
+
+# 语言与时区（GitHub Pages 服务器为 UTC，本地 Windows 需配合 tzinfo-data gem）
+lang:             "zh-CN"
+
+# 分页（博客列表页为独立页面，此处关闭全局分页）
+# 如未来需在首页分页，取消注释并搭配 jekyll-paginate 插件
+# paginate:          5
+# paginate_path:     "/blog/page:num/"
+
+# 集合定义：项目展示
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# 默认 Front Matter
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: "Your Name"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Markdown 引擎
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - vendor/

@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="hero-avatar">
+    <img src="{{ '/assets/images/avatar.svg' | relative_url }}"
+         alt="头像" width="120" height="120"
+         onerror="this.style.display='none'">
+    <div class="avatar-placeholder">
+      <svg viewBox="0 0 120 120"><circle cx="60" cy="45" r="25" fill="var(--c-muted)"/><ellipse cx="60" cy="105" rx="40" ry="25" fill="var(--c-muted)"/></svg>
+    </div>
+  </div>
+
+  <h1 class="hero-title">{{ site.title | default: "Hello, World!" }}</h1>
+  <p class="hero-tagline">{{ site.tagline | default: "A personal website" }}</p>
+
+  <div class="hero-skills">
+    <span class="skill-tag">嵌入式系统</span>
+    <span class="skill-tag">C/C++</span>
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">PSoC</span>
+    <span class="skill-tag">STM32</span>
+    <span class="skill-tag">FPGA</span>
+  </div>
+</section>
+
+<section class="intro">
+  <h2>👋 关于我</h2>
+  <p>集成电路专业本科生，热爱嵌入式底层开发与软硬协同设计。擅长 PSoC、STM32 等 MCU 平台的项目开发，对实时操作系统和数字电路设计有浓厚兴趣。</p>
+</section>
+
+<section class="quick-links">
+  <a href="{{ '/projects' | relative_url }}" class="quick-card">
+    <span class="card-icon">🛠️</span>
+    <h3>项目作品</h3>
+    <p>硬件与嵌入式项目展示</p>
+  </a>
+  <a href="{{ '/blog' | relative_url }}" class="quick-card">
+    <span class="card-icon">📝</span>
+    <h3>技术博客</h3>
+    <p>学习笔记与技术分享</p>
+  </a>
+  <a href="{{ '/about' | relative_url }}" class="quick-card">
+    <span class="card-icon">📄</span>
+    <h3>了解更多</h3>
+    <p>详细经历与联系方式</p>
+  </a>
+</section>
