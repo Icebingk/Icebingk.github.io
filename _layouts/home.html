@@ -16,18 +16,46 @@ layout: default
   <p class="hero-tagline">{{ site.tagline | default: "A personal website" }}</p>
 
   <div class="hero-skills">
-    <span class="skill-tag">嵌入式系统</span>
-    <span class="skill-tag">C/C++</span>
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">PSoC</span>
-    <span class="skill-tag">STM32</span>
     <span class="skill-tag">FPGA</span>
+    <span class="skill-tag">Verilog/VHDL</span>
+    <span class="skill-tag">STM32</span>
+    <span class="skill-tag">嵌入式C</span>
+    <span class="skill-tag">Python</span>
+    <span class="skill-tag">RISC-V</span>
+  </div>
+
+  <div class="hero-links">
+    <a href="https://github.com/Icebingk" target="_blank" rel="noopener" class="hero-btn">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+      GitHub
+    </a>
   </div>
 </section>
 
 <section class="intro">
   <h2>👋 关于我</h2>
-  <p>集成电路专业本科生，热爱嵌入式底层开发与软硬协同设计。擅长 PSoC、STM32 等 MCU 平台的项目开发，对实时操作系统和数字电路设计有浓厚兴趣。</p>
+  <p>广东工业大学集成电路学院在读本科生，专注于 FPGA 开发、嵌入式系统与软硬协同设计。热爱参加电子设计竞赛，享受从芯片驱动到系统集成的完整开发流程。</p>
+</section>
+
+<section class="featured-projects">
+  <h2>🚀 精选项目</h2>
+  <div class="project-grid">
+    {% assign featured = site.projects | where_exp: "p", "p.status != 'archived'" %}
+    {% for project in featured limit:4 %}
+    <a href="{{ project.url | relative_url }}" class="project-card">
+      <div class="project-card-header">
+        <h3>{{ project.title }}</h3>
+        {% if project.status %}
+        <span class="project-status {{ project.status }}">{{ project.status }}</span>
+        {% endif %}
+      </div>
+      <p>{{ project.excerpt | strip_html | truncate: 80 }}</p>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="section-footer">
+    <a href="{{ '/projects' | relative_url }}" class="btn-outline">查看全部项目 →</a>
+  </div>
 </section>
 
 <section class="quick-links">

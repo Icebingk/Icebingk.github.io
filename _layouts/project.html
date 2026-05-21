@@ -12,6 +12,12 @@ layout: default
       {% if page.github %}
       <a href="{{ page.github }}" target="_blank" rel="noopener" class="github-link">🔗 GitHub</a>
       {% endif %}
+      {% if page.demo %}
+      <a href="{{ page.demo }}" target="_blank" rel="noopener" class="demo-link">🌐 在线演示</a>
+      {% endif %}
+      {% if page.stars %}
+      <span class="project-stars">⭐ {{ page.stars }}</span>
+      {% endif %}
     </div>
   </header>
 
