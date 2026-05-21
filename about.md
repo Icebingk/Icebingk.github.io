@@ -8,35 +8,52 @@ permalink: /about/
 
 <div class="post-content" markdown="1">
 
+## 基本信息
+
+- **姓名：** ADBD | **年龄：** 21 岁 | **年级：** 大三
+- **手机：** 13822892748 | **邮箱：** [z1520349663@163.com](mailto:z1520349663@163.com)
+
 ## 教育背景
 
-- **广东工业大学** — 集成电路学院 · 集成电路设计与集成系统专业（本科在读）
+- **广东工业大学** — 集成电路学院 · IC 班 · 集成电路设计与集成系统专业（2023.09 ~ 至今）
+- **主修课程：** 数字集成电路、模拟集成电路、半导体物理与器件、EDA 技术与工具、硬件描述语言、深度学习、图论
+- **平均绩点：** 4.0
 
-## 技术栈
+## 荣誉证书
+
+| 竞赛 | 奖项 |
+|------|------|
+| 全国大学生 FPGA 创新设计竞赛 | 🥈 国家级二等奖 |
+| 第十六届蓝桥杯大赛 — FPGA 赛道 | 🥇 省级一等奖 |
+| 全国大学生集成电路创新创业大赛 | 🥉 省级三等奖 |
+| 全国大学生电子设计竞赛 | 🥉 省级三等奖 |
+
+## 工作经验
+
+**广州健飞通信有限公司** — FPGA 工程师（2026.03 ~ 2026.06）
+
+- **接口测试：** 负责 PCIe、DDR、DP 及 MIPI 等高速协议接口的板级联调与功能验证，结合 Vivado ILA 抓取底层数据包定位异常
+- **顶层设计：** 独立承担项目顶层架构设计，完成 LED 控制、以太网（NET）、AD 数据采集及 PCIe 等子模块的 RTL 编写与模块例化整合
+
+## 技能特长
 
 | 类别 | 技能 |
 |------|------|
-| 编程语言 | C/C++、Python、Verilog HDL、VHDL、Assembly |
-| MCU 平台 | STM32 (F4/F7)、PSoC 5LP、TI |
-| FPGA/EDA | Xilinx Artix-7、Vivado、Quartus II |
-| 协议与接口 | SPI、I2C、UART、HDMI、FIFO |
-| 工具链 | ARM GCC、PSoC Creator、Keil MDK、MATLAB |
-| 其他 | Git、Linux 基础、LaTeX、Jekyll |
+| 编程语言 | C（嵌入式开发）、Verilog（IIC/UART/SPI）、Python（数据分析/脚本）、VHDL、Assembly |
+| EDA 工具 | Vivado、ModelSim、VCS+Verdi、Design Compiler、IC Compiler |
+| 硬件能力 | 英文技术手册阅读、示波器、逻辑分析仪、信号发生器、直流稳压电源 |
+| 协议接口 | PCIe、DDR、DP、MIPI、SPI、I2C、UART、HDMI、FIFO |
+| 团队协作 | Git 版本控制、分支协同开发 |
+| 语言能力 | CET-4 / CET-6 |
 
 ## 研究兴趣
 
 - FPGA 数字信号处理与硬件加速
 - 嵌入式实时系统与软硬协同设计
 - RISC-V 处理器架构探索
+- 数字 IC 后端物理设计与时序收敛
 - 电子设计竞赛与工程实践
 
-## 联系方式
-
-- **GitHub:** [@{{ site.author.github }}](https://github.com/{{ site.author.github }})
-- **Email:** [`{{ site.author.email }}`](mailto:{{ site.author.email }})
-
----
-
-> "Stay hungry, stay foolish." — Steve Jobs
+> *"Stay hungry, stay foolish." — Steve Jobs*
 
 </div>

@@ -7,8 +7,8 @@ title:            "Icebingk"
 tagline:          "FPGA · 嵌入式 · 电子设计"
 description:      "个人技术博客与项目展示 — 集成电路专业，热爱嵌入式底层开发与软硬协同设计"
 author:
-  name:           "Icebingk"
-  email:          "your-email@example.com"
+  name:           "ADBD"
+  email:          "z1520349663@163.com"
   github:         "Icebingk"
 
 # 站点 URL（部署到 GitHub Pages 后生效）
@@ -36,7 +36,7 @@ defaults:
       type: "posts"
     values:
       layout: post
-      author: "Icebingk"
+      author: "ADBD"
   - scope:
       path: ""
       type: "projects"
