@@ -4,8 +4,8 @@
 # ============================================================
 
 title:            "Icebingk"
-tagline:          "FPGA · 嵌入式 · 电子设计"
-description:      "个人技术博客与项目展示 — 集成电路专业，热爱嵌入式底层开发与软硬协同设计"
+tagline:          "数字 IC · FPGA · 嵌入式系统"
+description:      "集成电路设计与集成系统专业学生，专注 FPGA、数字 IC、嵌入式系统与软硬协同设计"
 author:
   name:           "ADBD"
   email:          "z1520349663@163.com"

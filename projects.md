@@ -4,32 +4,28 @@ title: "项目作品"
 permalink: /projects/
 ---
 
-<h1 class="page-title">🛠️ 项目作品</h1>
+<header class="page-intro">
+  <p class="section-kicker">PROJECT ARCHIVE</p>
+  <h1 class="page-title">项目作品</h1>
+  <p>记录从 FPGA、数字 IC 到嵌入式系统的工程实践。点击项目查看设计目标、技术亮点和实现细节。</p>
+</header>
 
-<p style="text-align:center; color: var(--c-text-muted); margin-bottom: 2rem;">
-  以下是我在 GitHub 上维护的项目，涵盖嵌入式、FPGA、电子设计等领域。
-</p>
-
-<div class="project-grid">
-  {% for project in site.projects %}
-  <a href="{{ project.url | relative_url }}" class="project-card">
-    <div class="project-card-header">
-      <h3>{{ project.title }}</h3>
-      {% if project.status %}
-      <span class="project-status {{ project.status }}">{{ project.status }}</span>
-      {% endif %}
+<div class="project-grid project-grid-wide">
+  {% assign sorted_projects = site.projects | sort: "title" %}
+  {% for project in sorted_projects %}
+  <article class="project-card project-card-rich">
+    <a href="{{ project.url | relative_url }}" class="project-card-main">
+      <div class="project-card-header">
+        <h3>{{ project.title }}</h3>
+        {% if project.status %}<span class="project-status {{ project.status }}">{{ project.status }}</span>{% endif %}
+      </div>
+      <p>{{ project.excerpt | strip_html | truncate: 116 }}</p>
+    </a>
+    <div class="project-card-actions">
+      <a href="{{ project.url | relative_url }}">查看详情</a>
+      {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener">在线演示 ↗</a>{% endif %}
+      {% if project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
     </div>
-    <p>{{ project.excerpt | strip_html | truncate: 100 }}</p>
-    {% if project.github %}
-    <span class="project-card-link" onclick="event.stopPropagation(); window.open('{{ project.github }}', '_blank')">🔗 GitHub</span>
-    {% endif %}
-  </a>
+  </article>
   {% endfor %}
 </div>
-
-{% if site.projects.size == 0 %}
-<p style="text-align:center; color: var(--c-text-muted); padding: 3rem 0;">
-  暂无项目展示，敬请期待。
-</p>
-{% endif %}
-

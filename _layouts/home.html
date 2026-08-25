@@ -2,76 +2,103 @@
 layout: default
 ---
 
-<section class="hero">
-  <div class="hero-avatar">
-    <img src="{{ '/assets/images/avatar.svg' | relative_url }}"
-         alt="头像" width="120" height="120"
-         onerror="this.style.display='none'">
-    <div class="avatar-placeholder">
-      <svg viewBox="0 0 120 120"><circle cx="60" cy="45" r="25" fill="var(--c-muted)"/><ellipse cx="60" cy="105" rx="40" ry="25" fill="var(--c-muted)"/></svg>
+<section class="home-hero">
+  <div class="home-hero-copy">
+    <p class="eyebrow">FPGA · DIGITAL IC · EMBEDDED SYSTEMS</p>
+    <h1>把想法变成<br><span>可验证的硬件系统</span></h1>
+    <p class="home-lead">集成电路设计与集成系统专业学生，关注 FPGA 开发、数字 IC 全流程、高速接口验证与软硬协同设计。</p>
+
+    <div class="home-actions">
+      <a href="{{ '/projects/' | relative_url }}" class="action-primary">查看项目作品</a>
+      <a href="https://icebingk.github.io/nowcoder-quiz/" target="_blank" rel="noopener" class="action-secondary">进入在线题库 ↗</a>
+    </div>
+
+    <div class="hero-skills" aria-label="技术方向">
+      <span class="skill-tag">Verilog / SystemVerilog</span>
+      <span class="skill-tag">FPGA</span>
+      <span class="skill-tag">Digital IC</span>
+      <span class="skill-tag">RISC-V</span>
+      <span class="skill-tag">STM32</span>
+      <span class="skill-tag">Python</span>
     </div>
   </div>
 
-  <h1 class="hero-title">{{ site.title | default: "Hello, World!" }}</h1>
-  <p class="hero-tagline">{{ site.tagline | default: "A personal website" }}</p>
-
-  <div class="hero-skills">
-    <span class="skill-tag">FPGA</span>
-    <span class="skill-tag">Verilog/VHDL</span>
-    <span class="skill-tag">STM32</span>
-    <span class="skill-tag">嵌入式C</span>
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">RISC-V</span>
-  </div>
-
-  <div class="hero-links">
-    <a href="https://github.com/Icebingk" target="_blank" rel="noopener" class="hero-btn">
-      <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.418-1.305.762-1.604-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
-      GitHub
-    </a>
-  </div>
-</section>
-
-<section class="intro">
-  <h2>👋 关于我</h2>
-  <p>广东工业大学集成电路学院 IC 班大三在读，GPA 4.0。专注于 FPGA 开发与数字 IC 设计，熟悉 PCIe/DDR/MIPI 等高速接口验证。热爱电子设计竞赛，累计获国家级二等奖 1 项、省级一等奖/三等奖 3 项。目前于广州健飞通信担任 FPGA 工程师实习生。</p>
-</section>
-
-<section class="featured-projects">
-  <h2>🚀 精选项目</h2>
-  <div class="project-grid">
-    {% assign featured = site.projects | where_exp: "p", "p.status != 'archived'" %}
-    {% for project in featured limit:4 %}
-    <a href="{{ project.url | relative_url }}" class="project-card">
-      <div class="project-card-header">
-        <h3>{{ project.title }}</h3>
-        {% if project.status %}
-        <span class="project-status {{ project.status }}">{{ project.status }}</span>
-        {% endif %}
+  <aside class="profile-card" aria-label="个人概览">
+    <div class="profile-card-top">
+      <img src="{{ '/assets/images/avatar.svg' | relative_url }}" alt="Icebingk 头像" width="76" height="76">
+      <div>
+        <p class="profile-name">ADBD</p>
+        <p class="profile-role">广东工业大学 · 集成电路学院</p>
+        <span class="availability"><span></span> FPGA / 数字 IC 方向</span>
       </div>
-      <p>{{ project.excerpt | strip_html | truncate: 80 }}</p>
-    </a>
+    </div>
+    <div class="profile-stats">
+      <div><strong>4.0</strong><span>平均绩点</span></div>
+      <div><strong>4</strong><span>竞赛奖项</span></div>
+      <div><strong>{{ site.projects | size }}</strong><span>项目记录</span></div>
+      <div><strong>4+</strong><span>高速接口</span></div>
+    </div>
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="profile-github">GitHub / {{ site.author.github }} ↗</a>
+  </aside>
+</section>
+
+<section class="home-section">
+  <div class="section-heading">
+    <div><p class="section-kicker">SELECTED WORK</p><h2>精选项目</h2></div>
+    <a href="{{ '/projects/' | relative_url }}">查看全部 →</a>
+  </div>
+  <div class="project-grid project-grid-featured">
+    {% assign featured_slugs = "nowcoder-quiz,uart-asic,national-electronic-competition" | split: "," %}
+    {% for featured_slug in featured_slugs %}
+      {% assign project = site.projects | where: "slug", featured_slug | first %}
+      {% if project %}
+      <article class="project-card project-card-rich">
+        <a href="{{ project.url | relative_url }}" class="project-card-main">
+          <div class="project-card-header">
+            <h3>{{ project.title }}</h3>
+            {% if project.status %}<span class="project-status {{ project.status }}">{{ project.status }}</span>{% endif %}
+          </div>
+          <p>{{ project.excerpt | strip_html | truncate: 108 }}</p>
+        </a>
+        <div class="project-card-actions">
+          <a href="{{ project.url | relative_url }}">项目详情</a>
+          {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener">在线体验 ↗</a>{% elsif project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+        </div>
+      </article>
+      {% endif %}
     {% endfor %}
   </div>
-  <div class="section-footer">
-    <a href="{{ '/projects' | relative_url }}" class="btn-outline">查看全部项目 →</a>
+</section>
+
+<section class="home-section home-two-column">
+  <div class="focus-panel">
+    <p class="section-kicker">CURRENT FOCUS</p>
+    <h2>当前关注方向</h2>
+    <ul class="focus-list">
+      <li><span>01</span><div><strong>数字 IC 全流程</strong><p>从 RTL、综合、STA 到布局布线与物理签核。</p></div></li>
+      <li><span>02</span><div><strong>FPGA 系统设计</strong><p>高速接口、跨时钟域、信号处理与板级调试。</p></div></li>
+      <li><span>03</span><div><strong>软硬协同</strong><p>RISC-V、STM32 与自定义 RTL 模块协同工作。</p></div></li>
+    </ul>
+  </div>
+
+  <div class="latest-panel">
+    <div class="section-heading compact">
+      <div><p class="section-kicker">WRITING</p><h2>最近文章</h2></div>
+      <a href="{{ '/blog/' | relative_url }}">全部文章 →</a>
+    </div>
+    <div class="latest-posts">
+      {% for post in site.posts limit:3 %}
+      <a href="{{ post.url | relative_url }}" class="latest-post">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+        <strong>{{ post.title }}</strong>
+        <span>→</span>
+      </a>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-<section class="quick-links">
-  <a href="{{ '/projects' | relative_url }}" class="quick-card">
-    <span class="card-icon">🛠️</span>
-    <h3>项目作品</h3>
-    <p>硬件与嵌入式项目展示</p>
-  </a>
-  <a href="{{ '/blog' | relative_url }}" class="quick-card">
-    <span class="card-icon">📝</span>
-    <h3>技术博客</h3>
-    <p>学习笔记与技术分享</p>
-  </a>
-  <a href="{{ '/about' | relative_url }}" class="quick-card">
-    <span class="card-icon">📄</span>
-    <h3>了解更多</h3>
-    <p>详细经历与联系方式</p>
-  </a>
+<section class="home-cta">
+  <div><p class="section-kicker">LEARN & PRACTICE</p><h2>牛客专项知识题库</h2><p>764 道数字电路、Verilog 与 FPGA/CPLD 知识题，支持错题、收藏和跨设备云同步。</p></div>
+  <a href="https://icebingk.github.io/nowcoder-quiz/" target="_blank" rel="noopener" class="action-primary">开始刷题 ↗</a>
 </section>

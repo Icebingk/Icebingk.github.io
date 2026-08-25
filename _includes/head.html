@@ -1,35 +1,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#0b63ce">
 
-<title>
-  {% if page.title %}
-    {{ page.title }} | {{ site.title }}
-  {% else %}
-    {{ site.title }} | {{ site.tagline }}
-  {% endif %}
-</title>
-
+<title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} | {{ site.tagline }}{% endif %}</title>
 <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
 
-<!-- SEO / Open Graph -->
 <meta property="og:title" content="{{ page.title | default: site.title }}">
-<meta property="og:description" content="{{ site.description }}">
-<meta property="og:type" content="website">
+<meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+<meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/assets/images/avatar.svg' | absolute_url }}">
 
-<!-- 主样式表 -->
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
-<!-- Favicon -->
+<link rel="stylesheet" href="{{ '/assets/css/enhancements.css' | relative_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 
-<!-- 预加载深色主题，避免白屏闪烁 -->
 <script>
 (function() {
   var theme = localStorage.getItem('theme');
   var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if (theme === 'dark' || (!theme && prefersDark)) {
-    document.documentElement.classList.add('dark');
-  }
+  if (theme === 'dark' || (!theme && prefersDark)) document.documentElement.classList.add('dark');
 })();
 </script>
