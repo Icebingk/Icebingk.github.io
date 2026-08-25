@@ -5,66 +5,73 @@ permalink: /about/
 ---
 
 <header class="page-intro about-intro">
-  <p class="section-kicker">ABOUT & EXPERIENCE</p>
+  <p class="section-kicker">经历与技能</p>
   <h1 class="page-title">关于我</h1>
-  <p>集成电路设计与集成系统专业学生，以项目为主线学习 FPGA、数字 IC 与软硬协同设计。</p>
+  <p>广东工业大学集成电路设计与集成系统专业本科生，主要通过课程、竞赛和实习积累 FPGA、数字 IC 与嵌入式开发经验。</p>
 </header>
 
 <div class="about-highlights">
   <div><strong>4.0</strong><span>平均绩点</span></div>
   <div><strong>国家二等奖</strong><span>FPGA 创新设计竞赛</span></div>
-  <div><strong>RTL → GDSII</strong><span>数字 IC 全流程</span></div>
-  <div><strong>PCIe / DDR</strong><span>高速接口验证</span></div>
+  <div><strong>RTL → GDSII</strong><span>UART 数字 IC 项目</span></div>
+  <div><strong>4 类高速接口</strong><span>板级验证经历</span></div>
 </div>
 
 <div class="post-content" markdown="1">
 
 ## 基本信息
 
-- **姓名：** ADBD | **年龄：** 21 岁 | **年级：** 大三
-- **手机：** 138xxxx2748 | **邮箱：** [z1520349663@163.com](mailto:z1520349663@163.com)
+- **学校与专业：** 广东工业大学 · 集成电路设计与集成系统（2023.09 至今）
+- **主要方向：** FPGA 开发、数字 IC 设计、嵌入式软硬协同
+- **邮箱：** [z1520349663@163.com](mailto:z1520349663@163.com)
+- **GitHub：** [Icebingk](https://github.com/Icebingk)
 
 ## 教育背景
 
-- **广东工业大学** — 集成电路学院 · IC 班 · 集成电路设计与集成系统专业（2023.09 ~ 至今）
-- **主修课程：** 数字集成电路、模拟集成电路、半导体物理与器件、EDA 技术与工具、硬件描述语言、深度学习、图论
 - **平均绩点：** 4.0
+- **相关课程：** 数字集成电路、模拟集成电路、半导体物理与器件、EDA 技术与工具、硬件描述语言、深度学习、图论
 
-## 荣誉证书
+## FPGA 工程实习
 
-| 竞赛 | 奖项 |
-|------|------|
-| 全国大学生 FPGA 创新设计竞赛 | 🥈 国家级二等奖 |
-| 第十六届蓝桥杯大赛 — FPGA 赛道 | 🥇 省级一等奖 |
-| 全国大学生集成电路创新创业大赛 | 🥉 省级三等奖 |
-| 全国大学生电子设计竞赛 | 🥉 省级三等奖 |
+**广州健飞通信有限公司**（2026.03—2026.06）
 
-## 工作经验
+- 参与 PCIe、DDR、DP、MIPI 等接口的板级联调和功能验证。
+- 使用 Vivado ILA 抓取片上信号和数据包，辅助定位链路与时序问题。
+- 编写并整合 LED 控制、网络、AD 数据采集和 PCIe 等顶层 RTL 模块。
 
-**广州健飞通信有限公司** — FPGA 工程师（2026.03 ~ 2026.06）
+## 竞赛经历
 
-- **接口测试：** 负责 PCIe、DDR、DP 及 MIPI 等高速协议接口的板级联调与功能验证，结合 Vivado ILA 抓取底层数据包定位异常
-- **顶层设计：** 独立承担项目顶层架构设计，完成 LED 控制、以太网（NET）、AD 数据采集及 PCIe 等子模块的 RTL 编写与模块例化整合
+| 竞赛 | 结果 |
+|---|---|
+| 全国大学生 FPGA 创新设计竞赛 | 国家级二等奖 |
+| 第十六届蓝桥杯大赛 FPGA 赛道 | 省级一等奖 |
+| 全国大学生集成电路创新创业大赛 | 省级三等奖 |
+| 全国大学生电子设计竞赛 | 省级三等奖 |
 
-## 技能特长
+## 代表项目
 
-| 类别 | 技能 |
-|------|------|
-| 编程语言 | C（嵌入式开发）、Verilog（IIC/UART/SPI）、Python（数据分析/脚本）、VHDL、Assembly |
-| EDA 工具 | Vivado、ModelSim、VCS+Verdi、Design Compiler、IC Compiler |
-| 硬件能力 | 英文技术手册阅读、示波器、逻辑分析仪、信号发生器、直流稳压电源 |
-| 协议接口 | PCIe、DDR、DP、MIPI、SPI、I2C、UART、HDMI、FIFO |
-| 团队协作 | Git 版本控制、分支协同开发 |
-| 语言能力 | CET-4 / CET-6 |
+- **UART 数字 IC：** 独立完成带 64-Byte FIFO 的 UART，从 RTL、综合、STA 到布局布线和 GDSII 导出。
+- **高速多端口 SRAM 控制器：** 参与需求分析、模块划分、RTL 实现和 Tcl 流程自动化。
+- **RISC-V 系统应用：** 参与三级流水线处理器、ADC/DAC 和 HDMI 显示链路的系统集成。
+- **全国电子设计大赛项目：** 使用 FPGA 与 STM32 完成数据采集、FIR、SPI、I²C、UART 等模块。
+- **牛客专项题库：** 整理 764 道知识题，实现浏览器答题、错题收藏、本地保存和 Supabase 云同步。
 
-## 研究兴趣
+## 技能与工具
 
-- FPGA 系统设计、数字信号处理与硬件加速
-- 嵌入式实时系统与软硬协同设计
-- RISC-V 处理器架构探索
-- 数字 IC 后端物理设计与时序收敛
-- 电子设计竞赛与工程实践
+| 类别 | 实际使用内容 |
+|---|---|
+| RTL 与编程 | Verilog、SystemVerilog、VHDL、C、Python、Tcl |
+| FPGA 工具 | Vivado、ModelSim、Vivado ILA |
+| 数字 IC 工具 | VCS、Verdi、Design Compiler、IC Compiler |
+| 调试设备 | 示波器、逻辑分析仪、信号发生器、直流稳压电源 |
+| 接触过的接口 | PCIe、DDR、DP、MIPI、SPI、I²C、UART、HDMI、FIFO |
+| 协作与记录 | Git、Markdown、英文数据手册阅读 |
 
-> *"Stay hungry, stay foolish." — Steve Jobs*
+## 当前学习重点
+
+- 可综合 RTL 编码、时序分析和跨时钟域处理
+- FPGA 系统集成与板级调试
+- 数字 IC 前后端流程与时序收敛
+- RISC-V 与嵌入式软硬协同
 
 </div>

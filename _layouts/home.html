@@ -4,23 +4,21 @@ layout: default
 
 <section class="home-hero">
   <div class="home-hero-copy">
-    <p class="eyebrow">FPGA · DIGITAL IC · EMBEDDED SYSTEMS</p>
-    <h1>把想法变成<br><span>可验证的硬件系统</span></h1>
-    <p class="home-lead">集成电路设计与集成系统专业学生，关注 FPGA 开发、数字 IC 全流程、高速接口验证与软硬协同设计。</p>
+    <p class="eyebrow">广东工业大学 · 集成电路设计与集成系统</p>
+    <h1><span>FPGA 与数字 IC</span><br>项目记录</h1>
+    <p class="home-lead">这里整理我做过的课程、竞赛、实习和个人项目。每个项目尽量写清楚需求、本人负责的部分、使用的工具和验证结果。</p>
 
     <div class="home-actions">
-      <a href="{{ '/projects/' | relative_url }}" class="action-primary">浏览项目作品</a>
-      <a href="{{ '/about/' | relative_url }}" class="action-secondary">查看技术档案</a>
+      <a href="{{ '/projects/' | relative_url }}" class="action-primary">查看项目</a>
+      <a href="{{ '/about/' | relative_url }}" class="action-secondary">查看经历与技能</a>
     </div>
 
-    <div class="hero-skills" aria-label="技术方向">
+    <div class="hero-skills" aria-label="主要技术">
       <span class="skill-tag">Verilog / SystemVerilog</span>
-      <span class="skill-tag">FPGA</span>
-      <span class="skill-tag">Digital IC</span>
-      <span class="skill-tag">ASIC Flow</span>
-      <span class="skill-tag">RISC-V</span>
-      <span class="skill-tag">STM32</span>
-      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Vivado / ModelSim</span>
+      <span class="skill-tag">Design Compiler / ICC</span>
+      <span class="skill-tag">STM32 / RISC-V</span>
+      <span class="skill-tag">Python / Tcl</span>
     </div>
   </div>
 
@@ -29,57 +27,57 @@ layout: default
       <img src="{{ '/assets/images/avatar.svg' | relative_url }}" alt="Icebingk 头像" width="76" height="76">
       <div>
         <p class="profile-name">ADBD</p>
-        <p class="profile-role">广东工业大学 · 集成电路学院</p>
-        <span class="availability"><span></span> FPGA / 数字 IC 方向</span>
+        <p class="profile-role">2023 级 · 集成电路学院</p>
+        <span class="availability"><span></span>方向：FPGA / 数字 IC</span>
       </div>
     </div>
     <div class="profile-stats">
       <div><strong>4.0</strong><span>平均绩点</span></div>
-      <div><strong>4</strong><span>竞赛奖项</span></div>
-      <div><strong>{{ site.projects | size }}</strong><span>项目记录</span></div>
-      <div><strong>4+</strong><span>高速接口</span></div>
+      <div><strong>4 项</strong><span>竞赛获奖</span></div>
+      <div><strong>{{ site.projects | size }} 个</strong><span>项目记录</span></div>
+      <div><strong>1 段</strong><span>FPGA 实习</span></div>
     </div>
-    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="profile-github">GitHub / {{ site.author.github }} ↗</a>
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="profile-github">查看 GitHub：{{ site.author.github }} ↗</a>
   </aside>
 </section>
 
-<section class="proof-strip" aria-label="关键成果">
-  <div><strong>RTL → GDSII</strong><span>完成数字 IC 全流程实践</span></div>
-  <div><strong>0.09 ns</strong><span>UART 芯片全局时钟偏差</span></div>
-  <div><strong>764 题</strong><span>数字 IC / FPGA 在线题库</span></div>
-  <div><strong>4 类接口</strong><span>PCIe / DDR / DP / MIPI 验证</span></div>
+<section class="proof-strip" aria-label="项目数据">
+  <div><strong>64-Byte FIFO</strong><span>UART 数字 IC 项目</span></div>
+  <div><strong>0.09 ns</strong><span>布局布线后全局时钟偏差</span></div>
+  <div><strong>4 类高速接口</strong><span>PCIe / DDR / DP / MIPI 板级验证</span></div>
+  <div><strong>764 道题</strong><span>个人整理的面试知识题库</span></div>
 </section>
 
 <section class="home-section">
   <div class="section-heading">
-    <div><p class="section-kicker">CAPABILITY MAP</p><h2>能力地图</h2></div>
+    <div><p class="section-kicker">具体工作</p><h2>我实际做过什么</h2></div>
     <a href="{{ '/about/' | relative_url }}">完整经历 →</a>
   </div>
   <div class="capability-grid">
     <article class="capability-card">
       <span class="capability-index">01</span>
-      <h3>RTL 与数字 IC</h3>
-      <p>从需求拆解、模块划分、RTL 编码与仿真，到综合、STA、布局布线和物理签核。</p>
-      <div class="capability-tags"><span>Verilog</span><span>SystemVerilog</span><span>DC</span><span>ICC</span></div>
+      <h3>UART 数字 IC 全流程</h3>
+      <p>独立设计带 64-Byte FIFO 的 115200 bps UART，完成 RTL、仿真、DC 综合、ICC 布局布线、STA、DRC/LVS 和 GDSII 导出。</p>
+      <div class="capability-tags"><span>Verilog</span><span>DC</span><span>ICC</span><span>STA</span></div>
     </article>
     <article class="capability-card">
       <span class="capability-index">02</span>
-      <h3>FPGA 系统集成</h3>
-      <p>围绕高速接口、跨时钟域、片上调试与板级联调，完成可验证、可集成的硬件系统。</p>
-      <div class="capability-tags"><span>Vivado</span><span>ILA</span><span>PCIe</span><span>DDR</span></div>
+      <h3>FPGA 模块与系统集成</h3>
+      <p>实现或参与 SRAM 控制、FIR、ADC/DAC、HDMI、SPI、I²C、UART 等模块，并完成 FPGA 与 STM32 的系统联调。</p>
+      <div class="capability-tags"><span>Vivado</span><span>ModelSim</span><span>FPGA</span><span>STM32</span></div>
     </article>
     <article class="capability-card">
       <span class="capability-index">03</span>
-      <h3>软硬协同与工具化</h3>
-      <p>使用 STM32、RISC-V 与 Python 辅助脚本连接算法、控制软件和自定义硬件模块。</p>
-      <div class="capability-tags"><span>STM32</span><span>RISC-V</span><span>Python</span><span>Git</span></div>
+      <h3>高速接口验证与顶层设计</h3>
+      <p>实习期间参与 PCIe、DDR、DP、MIPI 板级验证，使用 Vivado ILA 定位问题，并整合 LED、网络、AD 采集和 PCIe 子模块。</p>
+      <div class="capability-tags"><span>PCIe</span><span>DDR</span><span>ILA</span><span>板级调试</span></div>
     </article>
   </div>
 </section>
 
 <section class="home-section">
   <div class="section-heading">
-    <div><p class="section-kicker">SELECTED WORK</p><h2>精选项目</h2></div>
+    <div><p class="section-kicker">项目</p><h2>代表项目</h2></div>
     <a href="{{ '/projects/' | relative_url }}">查看全部 →</a>
   </div>
   <div class="project-grid project-grid-featured">
@@ -91,13 +89,13 @@ layout: default
         <a href="{{ project.url | relative_url }}" class="project-card-main">
           <div class="project-card-header">
             <h3>{{ project.title }}</h3>
-            {% if project.status %}<span class="project-status {{ project.status }}">{{ project.status }}</span>{% endif %}
+            {% if project.status %}<span class="project-status {{ project.status }}">{% if project.status == 'completed' %}已完成{% elsif project.status == 'active' %}持续维护{% elsif project.status == 'ongoing' %}进行中{% else %}已归档{% endif %}</span>{% endif %}
           </div>
           <p>{{ project.excerpt | strip_html | truncate: 108 }}</p>
         </a>
         <div class="project-card-actions">
-          <a href="{{ project.url | relative_url }}">项目详情</a>
-          {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener">在线体验 ↗</a>{% elsif project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener">GitHub ↗</a>{% endif %}
+          <a href="{{ project.url | relative_url }}">查看记录</a>
+          {% if project.demo %}<a href="{{ project.demo }}" target="_blank" rel="noopener">在线使用 ↗</a>{% elsif project.github %}<a href="{{ project.github }}" target="_blank" rel="noopener">查看代码 ↗</a>{% endif %}
         </div>
       </article>
       {% endif %}
@@ -107,18 +105,18 @@ layout: default
 
 <section class="home-section home-two-column">
   <div class="focus-panel">
-    <p class="section-kicker">CURRENT FOCUS</p>
-    <h2>当前关注方向</h2>
+    <p class="section-kicker">工作方式</p>
+    <h2>我如何完成一个硬件项目</h2>
     <ul class="focus-list">
-      <li><span>01</span><div><strong>数字 IC 全流程</strong><p>从 RTL、综合、STA 到布局布线与物理签核。</p></div></li>
-      <li><span>02</span><div><strong>FPGA 系统设计</strong><p>高速接口、跨时钟域、信号处理与板级调试。</p></div></li>
-      <li><span>03</span><div><strong>软硬协同</strong><p>RISC-V、STM32 与自定义 RTL 模块协同工作。</p></div></li>
+      <li><span>01</span><div><strong>先读手册和时序图</strong><p>明确接口、时钟、复位、吞吐率和异常条件，再划分模块。</p></div></li>
+      <li><span>02</span><div><strong>先仿真，再上板</strong><p>用 testbench 检查功能；上板后结合 ILA、示波器和逻辑分析仪定位问题。</p></div></li>
+      <li><span>03</span><div><strong>保留脚本和记录</strong><p>使用 Python、Tcl 和 Git 保存参数生成、构建流程、测试结论与版本变化。</p></div></li>
     </ul>
   </div>
 
   <div class="latest-panel">
     <div class="section-heading compact">
-      <div><p class="section-kicker">WRITING</p><h2>最近文章</h2></div>
+      <div><p class="section-kicker">技术记录</p><h2>最近文章</h2></div>
       <a href="{{ '/blog/' | relative_url }}">全部文章 →</a>
     </div>
     <div class="latest-posts">
@@ -133,28 +131,16 @@ layout: default
   </div>
 </section>
 
-<section class="home-section journey-section">
-  <div class="section-heading">
-    <div><p class="section-kicker">ENGINEERING JOURNEY</p><h2>成长轨迹</h2></div>
-  </div>
-  <div class="journey-line">
-    <article><time>2023</time><h3>进入集成电路方向</h3><p>系统学习数字电路、模拟电路、半导体器件与硬件描述语言。</p></article>
-    <article><time>2024—2025</time><h3>竞赛与系统实践</h3><p>在 FPGA、集成电路创新创业和电子设计竞赛中完成多项软硬件系统。</p></article>
-    <article><time>2025</time><h3>深入数字 IC 全流程</h3><p>完成 UART 芯片从 RTL 到 GDSII 的设计，实现综合、时序收敛与物理签核。</p></article>
-    <article><time>2026</time><h3>高速接口工程验证</h3><p>参与 PCIe、DDR、DP 与 MIPI 板级联调，并持续沉淀项目与学习工具。</p></article>
-  </div>
-</section>
-
 <section class="home-cta">
-  <div><p class="section-kicker">LEARN & PRACTICE</p><h2>牛客专项知识题库</h2><p>764 道数字电路、Verilog 与 FPGA/CPLD 知识题，支持错题、收藏和跨设备云同步。</p></div>
-  <a href="https://icebingk.github.io/nowcoder-quiz/" target="_blank" rel="noopener" class="action-primary">开始刷题 ↗</a>
+  <div><p class="section-kicker">个人工具</p><h2>我整理的牛客专项题库</h2><p>收录 764 道数字电路、Verilog 与 FPGA/CPLD 知识题。支持逐题作答、错题筛选、收藏、资料阅读和跨设备进度合并。</p></div>
+  <a href="https://icebingk.github.io/nowcoder-quiz/" target="_blank" rel="noopener" class="action-primary">打开题库 ↗</a>
 </section>
 
 <section class="contact-banner">
   <div>
-    <p class="section-kicker">CONNECT</p>
-    <h2>查看代码、项目细节或联系我</h2>
-    <p>项目源码与持续更新记录在 GitHub；也可以通过邮件交流 FPGA、数字 IC 与嵌入式开发。</p>
+    <p class="section-kicker">代码与联系</p>
+    <h2>查看源码或联系我</h2>
+    <p>公开项目放在 GitHub。关于 FPGA、数字 IC、嵌入式项目的问题，可以通过邮件联系。</p>
   </div>
   <div class="contact-actions">
     <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="action-secondary">GitHub ↗</a>
