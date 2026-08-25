@@ -9,14 +9,15 @@ layout: default
     <p class="home-lead">集成电路设计与集成系统专业学生，关注 FPGA 开发、数字 IC 全流程、高速接口验证与软硬协同设计。</p>
 
     <div class="home-actions">
-      <a href="{{ '/projects/' | relative_url }}" class="action-primary">查看项目作品</a>
-      <a href="https://icebingk.github.io/nowcoder-quiz/" target="_blank" rel="noopener" class="action-secondary">进入在线题库 ↗</a>
+      <a href="{{ '/projects/' | relative_url }}" class="action-primary">浏览项目作品</a>
+      <a href="{{ '/about/' | relative_url }}" class="action-secondary">查看技术档案</a>
     </div>
 
     <div class="hero-skills" aria-label="技术方向">
       <span class="skill-tag">Verilog / SystemVerilog</span>
       <span class="skill-tag">FPGA</span>
       <span class="skill-tag">Digital IC</span>
+      <span class="skill-tag">ASIC Flow</span>
       <span class="skill-tag">RISC-V</span>
       <span class="skill-tag">STM32</span>
       <span class="skill-tag">Python</span>
@@ -40,6 +41,40 @@ layout: default
     </div>
     <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="profile-github">GitHub / {{ site.author.github }} ↗</a>
   </aside>
+</section>
+
+<section class="proof-strip" aria-label="关键成果">
+  <div><strong>RTL → GDSII</strong><span>完成数字 IC 全流程实践</span></div>
+  <div><strong>0.09 ns</strong><span>UART 芯片全局时钟偏差</span></div>
+  <div><strong>764 题</strong><span>数字 IC / FPGA 在线题库</span></div>
+  <div><strong>4 类接口</strong><span>PCIe / DDR / DP / MIPI 验证</span></div>
+</section>
+
+<section class="home-section">
+  <div class="section-heading">
+    <div><p class="section-kicker">CAPABILITY MAP</p><h2>能力地图</h2></div>
+    <a href="{{ '/about/' | relative_url }}">完整经历 →</a>
+  </div>
+  <div class="capability-grid">
+    <article class="capability-card">
+      <span class="capability-index">01</span>
+      <h3>RTL 与数字 IC</h3>
+      <p>从需求拆解、模块划分、RTL 编码与仿真，到综合、STA、布局布线和物理签核。</p>
+      <div class="capability-tags"><span>Verilog</span><span>SystemVerilog</span><span>DC</span><span>ICC</span></div>
+    </article>
+    <article class="capability-card">
+      <span class="capability-index">02</span>
+      <h3>FPGA 系统集成</h3>
+      <p>围绕高速接口、跨时钟域、片上调试与板级联调，完成可验证、可集成的硬件系统。</p>
+      <div class="capability-tags"><span>Vivado</span><span>ILA</span><span>PCIe</span><span>DDR</span></div>
+    </article>
+    <article class="capability-card">
+      <span class="capability-index">03</span>
+      <h3>软硬协同与工具化</h3>
+      <p>使用 STM32、RISC-V 与 Python 辅助脚本连接算法、控制软件和自定义硬件模块。</p>
+      <div class="capability-tags"><span>STM32</span><span>RISC-V</span><span>Python</span><span>Git</span></div>
+    </article>
+  </div>
 </section>
 
 <section class="home-section">
@@ -98,7 +133,31 @@ layout: default
   </div>
 </section>
 
+<section class="home-section journey-section">
+  <div class="section-heading">
+    <div><p class="section-kicker">ENGINEERING JOURNEY</p><h2>成长轨迹</h2></div>
+  </div>
+  <div class="journey-line">
+    <article><time>2023</time><h3>进入集成电路方向</h3><p>系统学习数字电路、模拟电路、半导体器件与硬件描述语言。</p></article>
+    <article><time>2024—2025</time><h3>竞赛与系统实践</h3><p>在 FPGA、集成电路创新创业和电子设计竞赛中完成多项软硬件系统。</p></article>
+    <article><time>2025</time><h3>深入数字 IC 全流程</h3><p>完成 UART 芯片从 RTL 到 GDSII 的设计，实现综合、时序收敛与物理签核。</p></article>
+    <article><time>2026</time><h3>高速接口工程验证</h3><p>参与 PCIe、DDR、DP 与 MIPI 板级联调，并持续沉淀项目与学习工具。</p></article>
+  </div>
+</section>
+
 <section class="home-cta">
   <div><p class="section-kicker">LEARN & PRACTICE</p><h2>牛客专项知识题库</h2><p>764 道数字电路、Verilog 与 FPGA/CPLD 知识题，支持错题、收藏和跨设备云同步。</p></div>
   <a href="https://icebingk.github.io/nowcoder-quiz/" target="_blank" rel="noopener" class="action-primary">开始刷题 ↗</a>
+</section>
+
+<section class="contact-banner">
+  <div>
+    <p class="section-kicker">CONNECT</p>
+    <h2>查看代码、项目细节或联系我</h2>
+    <p>项目源码与持续更新记录在 GitHub；也可以通过邮件交流 FPGA、数字 IC 与嵌入式开发。</p>
+  </div>
+  <div class="contact-actions">
+    <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="action-secondary">GitHub ↗</a>
+    <a href="mailto:{{ site.author.email }}" class="action-primary">发送邮件</a>
+  </div>
 </section>

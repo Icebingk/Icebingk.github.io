@@ -4,7 +4,11 @@ title: "技术博客"
 permalink: /blog/
 ---
 
-<h1 class="page-title">📝 技术博客</h1>
+<header class="page-intro">
+  <p class="section-kicker">NOTES & WRITING</p>
+  <h1 class="page-title">技术博客</h1>
+  <p>记录 FPGA 开发、数字 IC 设计、工具链使用和工程调试中的方法与结论。</p>
+</header>
 
 <ul class="post-list">
   {% for post in site.posts %}

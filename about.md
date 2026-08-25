@@ -4,7 +4,18 @@ title: "关于我"
 permalink: /about/
 ---
 
-<h1 class="page-title">📄 关于我</h1>
+<header class="page-intro about-intro">
+  <p class="section-kicker">ABOUT & EXPERIENCE</p>
+  <h1 class="page-title">关于我</h1>
+  <p>集成电路设计与集成系统专业学生，以项目为主线学习 FPGA、数字 IC 与软硬协同设计。</p>
+</header>
+
+<div class="about-highlights">
+  <div><strong>4.0</strong><span>平均绩点</span></div>
+  <div><strong>国家二等奖</strong><span>FPGA 创新设计竞赛</span></div>
+  <div><strong>RTL → GDSII</strong><span>数字 IC 全流程</span></div>
+  <div><strong>PCIe / DDR</strong><span>高速接口验证</span></div>
+</div>
 
 <div class="post-content" markdown="1">
 
@@ -48,7 +59,7 @@ permalink: /about/
 
 ## 研究兴趣
 
-- FPGA 数字信号处理与硬件加速
+- FPGA 系统设计、数字信号处理与硬件加速
 - 嵌入式实时系统与软硬协同设计
 - RISC-V 处理器架构探索
 - 数字 IC 后端物理设计与时序收敛
