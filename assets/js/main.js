@@ -58,6 +58,12 @@
    * 初始化
    * ============================================================ */
   function initMotion() {
+    var ambient = document.createElement('div');
+    ambient.className = 'ambient-motion';
+    ambient.setAttribute('aria-hidden', 'true');
+    ambient.innerHTML = '<span></span><span></span><span></span>';
+    document.body.prepend(ambient);
+
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var progress = document.createElement('div');
     progress.className = 'scroll-progress';
