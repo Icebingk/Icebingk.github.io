@@ -3,6 +3,7 @@ layout: default
 ---
 
 <section class="home-hero">
+  <div class="hero-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
   <div class="home-hero-copy">
     <p class="eyebrow">广东工业大学 · 集成电路设计与集成系统</p>
     <h1><span>FPGA 与数字 IC</span><br>项目记录</h1>
@@ -32,10 +33,10 @@ layout: default
       </div>
     </div>
     <div class="profile-stats">
-      <div><strong>4.0</strong><span>平均绩点</span></div>
-      <div><strong>4 项</strong><span>竞赛获奖</span></div>
-      <div><strong>{{ site.projects | size }} 个</strong><span>项目记录</span></div>
-      <div><strong>1 段</strong><span>FPGA 实习</span></div>
+      <div><strong data-count="4" data-decimals="1">4.0</strong><span>平均绩点</span></div>
+      <div><strong data-count="4" data-suffix=" 项">4 项</strong><span>竞赛获奖</span></div>
+      <div><strong data-count="{{ site.projects | size }}" data-suffix=" 个">{{ site.projects | size }} 个</strong><span>项目记录</span></div>
+      <div><strong data-count="1" data-suffix=" 段">1 段</strong><span>FPGA 实习</span></div>
     </div>
     <a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener" class="profile-github">查看 GitHub：{{ site.author.github }} ↗</a>
   </aside>
@@ -43,9 +44,9 @@ layout: default
 
 <section class="proof-strip" aria-label="项目数据">
   <div><strong>64-Byte FIFO</strong><span>UART 数字 IC 项目</span></div>
-  <div><strong>0.09 ns</strong><span>布局布线后全局时钟偏差</span></div>
-  <div><strong>4 类高速接口</strong><span>PCIe / DDR / DP / MIPI 板级验证</span></div>
-  <div><strong>764 道题</strong><span>个人整理的面试知识题库</span></div>
+  <div><strong data-count="0.09" data-decimals="2" data-suffix=" ns">0.09 ns</strong><span>布局布线后全局时钟偏差</span></div>
+  <div><strong data-count="4" data-suffix=" 类高速接口">4 类高速接口</strong><span>PCIe / DDR / DP / MIPI 板级验证</span></div>
+  <div><strong data-count="764" data-suffix=" 道题">764 道题</strong><span>个人整理的面试知识题库</span></div>
 </section>
 
 <section class="home-section">
